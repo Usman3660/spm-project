@@ -159,56 +159,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                 </div>
 
-                <!-- Abstract Dashboard Visual -->
+                <!-- POS Mockup Image Section (Updated for TC-33) -->
                 <div class="relative lg:h-[600px] w-full flex items-center justify-center fade-in-up" style="animation-delay: 0.3s;">
-                    <!-- Main Dashboard Card -->
-                    <div class="relative z-20 bg-white rounded-2xl shadow-2xl border border-slate-100 p-4 w-full max-w-lg transform rotate-y-12 hover:rotate-0 transition duration-700 ease-out">
-                        <!-- Mock Header -->
-                        <div class="flex items-center justify-between mb-6 border-b border-slate-50 pb-4">
-                            <div class="flex items-center gap-4">
-                                <div class="w-3 h-3 rounded-full bg-red-400"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-400"></div>
-                            </div>
-                            <div class="h-2 w-24 bg-slate-100 rounded-full"></div>
-                        </div>
-                        <!-- Mock Stats Grid -->
-                        <div class="grid grid-cols-2 gap-4 mb-6">
-                            <div class="bg-brand-50 p-4 rounded-xl">
-                                <p class="text-xs text-brand-600 font-bold uppercase mb-1">Total Sales</p>
-                                <p class="text-2xl font-bold text-slate-800">$12,450</p>
-                                <p class="text-xs text-green-600 flex items-center mt-1"><i data-lucide="trending-up" class="w-3 h-3 mr-1"></i> +12%</p>
-                            </div>
-                            <div class="bg-purple-50 p-4 rounded-xl">
-                                <p class="text-xs text-purple-600 font-bold uppercase mb-1">Orders</p>
-                                <p class="text-2xl font-bold text-slate-800">1,204</p>
-                                <p class="text-xs text-green-600 flex items-center mt-1"><i data-lucide="trending-up" class="w-3 h-3 mr-1"></i> +5%</p>
+                    <div class="relative w-full max-w-lg z-20">
+                        <!-- Replaced CSS Card with Actual Mockup Image -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                            alt="NexusPOS Dashboard Interface" 
+                            class="rounded-2xl shadow-2xl border border-slate-100 transform rotate-y-12 hover:rotate-0 transition duration-700 ease-out w-full"
+                        >
+                        
+                        <!-- Floating Badge 1 -->
+                        <div class="absolute top-10 -right-4 md:-right-10 z-30 bg-white p-3 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
+                            <div class="bg-green-100 p-2 rounded-lg text-green-600"><i data-lucide="shopping-bag" class="w-5 h-5"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-500">New Order</p>
+                                <p class="font-bold text-slate-800 text-sm">+$124.00</p>
                             </div>
                         </div>
-                        <!-- Mock Chart Area -->
-                        <div class="bg-slate-50 rounded-xl p-4 h-48 flex items-end justify-between gap-2">
-                            <div class="w-full bg-brand-200 rounded-t-md h-[40%]"></div>
-                            <div class="w-full bg-brand-300 rounded-t-md h-[60%]"></div>
-                            <div class="w-full bg-brand-500 rounded-t-md h-[80%]"></div>
-                            <div class="w-full bg-brand-400 rounded-t-md h-[50%]"></div>
-                            <div class="w-full bg-brand-600 rounded-t-md h-[90%]"></div>
-                        </div>
-                    </div>
 
-                    <!-- Floating Elements -->
-                    <div class="absolute top-10 -right-4 z-30 bg-white p-3 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
-                        <div class="bg-green-100 p-2 rounded-lg text-green-600"><i data-lucide="shopping-bag" class="w-5 h-5"></i></div>
-                        <div>
-                            <p class="text-xs text-slate-500">New Order</p>
-                            <p class="font-bold text-slate-800 text-sm">+$124.00</p>
-                        </div>
-                    </div>
-
-                    <div class="absolute -bottom-6 -left-4 z-30 bg-white p-3 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3 animate-bounce" style="animation-duration: 4s;">
-                        <div class="bg-orange-100 p-2 rounded-lg text-orange-600"><i data-lucide="users" class="w-5 h-5"></i></div>
-                        <div>
-                            <p class="text-xs text-slate-500">New Customer</p>
-                            <p class="font-bold text-slate-800 text-sm">Sarah J.</p>
+                        <!-- Floating Badge 2 -->
+                        <div class="absolute -bottom-6 -left-4 md:-left-10 z-30 bg-white p-3 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3 animate-bounce" style="animation-duration: 4s;">
+                            <div class="bg-orange-100 p-2 rounded-lg text-orange-600"><i data-lucide="users" class="w-5 h-5"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-500">New Customer</p>
+                                <p class="font-bold text-slate-800 text-sm">Sarah J.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
