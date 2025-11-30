@@ -68,7 +68,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         
         .hero-gradient {
-            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+        }
+
+        /* Added for TC-34: Subtle Grid Pattern */
+        .hero-pattern {
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 40px 40px;
         }
     </style>
 </head>
@@ -88,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white">
+                    <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white shadow-lg shadow-brand-500/20">
                         <i data-lucide="layers" class="w-6 h-6"></i>
                     </div>
                     <span class="font-bold text-2xl tracking-tight text-slate-900">Nexus<span class="text-brand-600">POS</span></span>
@@ -99,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <a href="#features" class="text-slate-600 hover:text-brand-600 font-medium transition">Features</a>
                     <a href="#solutions" class="text-slate-600 hover:text-brand-600 font-medium transition">Solutions</a>
                     <a href="#pricing" class="text-slate-600 hover:text-brand-600 font-medium transition">Pricing</a>
-                    <a href="#contact" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-full transition shadow-lg shadow-brand-500/30">Get Started</a>
+                    <a href="#contact" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-full transition shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50">Get Started</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -122,55 +128,55 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-gradient">
+    <!-- Hero Section (Updated for TC-34) -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-gradient hero-pattern">
         <!-- Background Decor -->
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-100 blur-3xl opacity-50"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-purple-100 blur-3xl opacity-50"></div>
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-100 blur-3xl opacity-60"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-purple-100 blur-3xl opacity-60"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
                 <!-- Text Content -->
                 <div class="text-center lg:text-left fade-in-up" style="animation-delay: 0.1s;">
-                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-sm font-semibold mb-6">
-                        <span class="flex h-2 w-2 rounded-full bg-brand-600 mr-2"></span>
+                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-white border border-brand-100 text-brand-600 text-sm font-semibold mb-6 shadow-sm">
+                        <span class="flex h-2 w-2 rounded-full bg-brand-600 mr-2 animate-pulse"></span>
                         New Version 2.0 Released
                     </div>
-                    <h1 class="text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-6 leading-tight">
+                    <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
                         Sell smarter with <br>
-                        <span class="text-brand-600">Nexus Intelligence</span>
+                        <!-- Gradient Text Added for TC-34 -->
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-600 to-purple-600">Nexus Intelligence</span>
                     </h1>
                     <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        The all-in-one POS system designed to streamline operations, manage inventory in real-time, and boost customer retention for modern retailers.
+                        The all-in-one POS system designed to streamline operations, manage inventory in real-time, and boost customer retention.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#contact" class="px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-xl shadow-xl shadow-brand-500/30 transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                        <a href="#contact" class="px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-xl shadow-brand-500/30 transition transform hover:-translate-y-1 hover:shadow-brand-500/50 flex items-center justify-center gap-2 ring-offset-2 focus:ring-2 ring-brand-500">
                             Start Free Trial
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
-                        <a href="#features" class="px-8 py-4 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-semibold rounded-xl shadow-md transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                        <a href="#features" class="px-8 py-4 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-bold rounded-xl shadow-sm hover:shadow-md transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
                             <i data-lucide="play-circle" class="w-5 h-5 text-slate-400"></i>
                             Watch Demo
                         </a>
                     </div>
-                    <div class="mt-8 flex items-center justify-center lg:justify-start gap-6 text-slate-400 text-sm">
-                        <div class="flex items-center gap-1"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i> No credit card required</div>
-                        <div class="flex items-center gap-1"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i> 14-day free trial</div>
+                    <div class="mt-8 flex items-center justify-center lg:justify-start gap-6 text-slate-500 text-sm font-medium">
+                        <div class="flex items-center gap-1"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> No credit card required</div>
+                        <div class="flex items-center gap-1"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> 14-day free trial</div>
                     </div>
                 </div>
 
-                <!-- POS Mockup Image Section (Updated for TC-33) -->
+                <!-- POS Mockup Image Section (Preserved from TC-33) -->
                 <div class="relative lg:h-[600px] w-full flex items-center justify-center fade-in-up" style="animation-delay: 0.3s;">
                     <div class="relative w-full max-w-lg z-20">
-                        <!-- Replaced CSS Card with Actual Mockup Image -->
                         <img 
                             src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
                             alt="NexusPOS Dashboard Interface" 
-                            class="rounded-2xl shadow-2xl border border-slate-100 transform rotate-y-12 hover:rotate-0 transition duration-700 ease-out w-full"
+                            class="rounded-2xl shadow-2xl border border-slate-100 transform rotate-y-12 hover:rotate-0 transition duration-700 ease-out w-full ring-1 ring-slate-900/5"
                         >
                         
                         <!-- Floating Badge 1 -->
-                        <div class="absolute top-10 -right-4 md:-right-10 z-30 bg-white p-3 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
+                        <div class="absolute top-10 -right-4 md:-right-10 z-30 bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg border border-slate-100 flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
                             <div class="bg-green-100 p-2 rounded-lg text-green-600"><i data-lucide="shopping-bag" class="w-5 h-5"></i></div>
                             <div>
                                 <p class="text-xs text-slate-500">New Order</p>
@@ -179,7 +185,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
 
                         <!-- Floating Badge 2 -->
-                        <div class="absolute -bottom-6 -left-4 md:-left-10 z-30 bg-white p-3 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3 animate-bounce" style="animation-duration: 4s;">
+                        <div class="absolute -bottom-6 -left-4 md:-left-10 z-30 bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg border border-slate-100 flex items-center gap-3 animate-bounce" style="animation-duration: 4s;">
                             <div class="bg-orange-100 p-2 rounded-lg text-orange-600"><i data-lucide="users" class="w-5 h-5"></i></div>
                             <div>
                                 <p class="text-xs text-slate-500">New Customer</p>
